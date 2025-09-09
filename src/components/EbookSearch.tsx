@@ -82,8 +82,10 @@ const EbookSearch: React.FC<EbookSearchProps> = ({ onBookSelect }) => {
         coverUrl: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=200&h=300&fit=crop'
       }
     ].filter(book => 
+      query.length === 0 || 
       book.title.toLowerCase().includes(query.toLowerCase()) ||
-      book.author.toLowerCase().includes(query.toLowerCase())
+      book.author.toLowerCase().includes(query.toLowerCase()) ||
+      book.description.toLowerCase().includes(query.toLowerCase())
     );
     
     setSearchResults(mockResults);

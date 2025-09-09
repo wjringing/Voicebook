@@ -120,9 +120,11 @@ const AudiobookSearch: React.FC<AudiobookSearchProps> = ({ onAudiobookSelect }) 
         publishYear: '1895'
       }
     ].filter(book => 
+      query.length === 0 || 
       book.title.toLowerCase().includes(query.toLowerCase()) ||
       book.author.toLowerCase().includes(query.toLowerCase()) ||
-      book.genre.toLowerCase().includes(query.toLowerCase())
+      book.genre.toLowerCase().includes(query.toLowerCase()) ||
+      book.description.toLowerCase().includes(query.toLowerCase())
     );
     
     setSearchResults(mockResults);
