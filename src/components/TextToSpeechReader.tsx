@@ -357,14 +357,6 @@ const TextToSpeechReader: React.FC = () => {
               isPlaying={isPlaying}
             />
           )}
-          ) : (
-            <TextDisplay
-              text={text}
-              onTextChange={setText}
-              currentPosition={currentPosition}
-              isPlaying={isPlaying}
-            />
-          )}
         </div>
 
         {/* Footer */}
