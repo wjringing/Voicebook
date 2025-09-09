@@ -14,6 +14,8 @@ interface SearchResult {
   format: string;
   source: string;
   coverUrl?: string;
+  genre: string;
+  subject: string;
 }
 
 const EbookSearch: React.FC<EbookSearchProps> = ({ onBookSelect }) => {
@@ -39,7 +41,9 @@ const EbookSearch: React.FC<EbookSearchProps> = ({ onBookSelect }) => {
         downloadUrl: 'https://www.gutenberg.org/files/1342/1342-0.txt',
         format: 'TXT',
         source: 'Project Gutenberg',
-        coverUrl: 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=200&h=300&fit=crop'
+        coverUrl: 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=200&h=300&fit=crop',
+        genre: 'Romance',
+        subject: 'Classic Literature'
       },
       {
         id: '2',
@@ -49,7 +53,9 @@ const EbookSearch: React.FC<EbookSearchProps> = ({ onBookSelect }) => {
         downloadUrl: 'https://www.gutenberg.org/files/64317/64317-0.txt',
         format: 'TXT',
         source: 'Project Gutenberg',
-        coverUrl: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=200&h=300&fit=crop'
+        coverUrl: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=200&h=300&fit=crop',
+        genre: 'Literary Fiction',
+        subject: 'American Literature'
       },
       {
         id: '3',
@@ -59,7 +65,9 @@ const EbookSearch: React.FC<EbookSearchProps> = ({ onBookSelect }) => {
         downloadUrl: 'https://www.gutenberg.org/files/11/11-0.txt',
         format: 'TXT',
         source: 'Project Gutenberg',
-        coverUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=300&fit=crop'
+        coverUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=300&fit=crop',
+        genre: 'Fantasy',
+        subject: 'Children\'s Literature'
       },
       {
         id: '4',
@@ -69,7 +77,9 @@ const EbookSearch: React.FC<EbookSearchProps> = ({ onBookSelect }) => {
         downloadUrl: 'https://www.gutenberg.org/files/84/84-0.txt',
         format: 'TXT',
         source: 'Project Gutenberg',
-        coverUrl: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=200&h=300&fit=crop'
+        coverUrl: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=200&h=300&fit=crop',
+        genre: 'Gothic Horror',
+        subject: 'Science Fiction'
       },
       {
         id: '5',
@@ -79,13 +89,17 @@ const EbookSearch: React.FC<EbookSearchProps> = ({ onBookSelect }) => {
         downloadUrl: 'https://www.gutenberg.org/files/1661/1661-0.txt',
         format: 'TXT',
         source: 'Project Gutenberg',
-        coverUrl: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=200&h=300&fit=crop'
+        coverUrl: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=200&h=300&fit=crop',
+        genre: 'Mystery',
+        subject: 'Detective Fiction'
       }
     ].filter(book => 
       query.length === 0 || 
       book.title.toLowerCase().includes(query.toLowerCase()) ||
       book.author.toLowerCase().includes(query.toLowerCase()) ||
-      book.description.toLowerCase().includes(query.toLowerCase())
+      book.description.toLowerCase().includes(query.toLowerCase()) ||
+      book.genre.toLowerCase().includes(query.toLowerCase()) ||
+      book.subject.toLowerCase().includes(query.toLowerCase())
     );
     
     setSearchResults(mockResults);
@@ -152,7 +166,7 @@ const EbookSearch: React.FC<EbookSearchProps> = ({ onBookSelect }) => {
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder="Search for books, authors, or topics..."
+            placeholder="Search for books, authors, genres, or subjects..."
             className="flex-1 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
           />
           <button
@@ -186,7 +200,13 @@ const EbookSearch: React.FC<EbookSearchProps> = ({ onBookSelect }) => {
                     <p className="text-xs text-gray-600 mb-1">{book.author}</p>
                     <p className="text-xs text-gray-500 mb-2 line-clamp-2">{book.description}</p>
                     <div className="flex items-center justify-between">
-                      <span className="text-xs bg-gray-100 px-2 py-1 rounded">{book.source}</span>
+                      <div className="flex flex-col gap-1">
+                        <div className="flex items-center gap-1">
+                          <span className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded">{book.genre}</span>
+                          <span className="text-xs bg-gray-100 px-2 py-1 rounded">{book.source}</span>
+                        </div>
+                        <span className="text-xs text-gray-500">{book.subject}</span>
+                      </div>
                       <button
                         onClick={() => downloadBook(book)}
                         disabled={downloadingId === book.id}

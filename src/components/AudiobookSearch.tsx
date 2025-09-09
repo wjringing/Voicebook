@@ -124,7 +124,8 @@ const AudiobookSearch: React.FC<AudiobookSearchProps> = ({ onAudiobookSelect }) 
       book.title.toLowerCase().includes(query.toLowerCase()) ||
       book.author.toLowerCase().includes(query.toLowerCase()) ||
       book.genre.toLowerCase().includes(query.toLowerCase()) ||
-      book.description.toLowerCase().includes(query.toLowerCase())
+      book.description.toLowerCase().includes(query.toLowerCase()) ||
+      book.narrator.toLowerCase().includes(query.toLowerCase())
     );
     
     setSearchResults(mockResults);
@@ -161,7 +162,7 @@ const AudiobookSearch: React.FC<AudiobookSearchProps> = ({ onAudiobookSelect }) 
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder="Search for audiobooks, authors, or genres..."
+            placeholder="Search for audiobooks, authors, genres, or narrators..."
             className="flex-1 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
           />
           <button
