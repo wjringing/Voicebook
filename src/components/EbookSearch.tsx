@@ -93,6 +93,186 @@ const EbookSearch: React.FC<EbookSearchProps> = ({ onBookSelect }) => {
         genre: 'Mystery',
         subject: 'Detective Fiction'
       }
+      {
+        id: '6',
+        title: 'Dracula',
+        author: 'Bram Stoker',
+        description: 'The classic vampire novel that defined the genre.',
+        downloadUrl: 'https://www.gutenberg.org/files/345/345-0.txt',
+        format: 'TXT',
+        source: 'Project Gutenberg',
+        coverUrl: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=200&h=300&fit=crop',
+        genre: 'Horror',
+        subject: 'Gothic Literature'
+      },
+      {
+        id: '7',
+        title: 'The Art of War',
+        author: 'Sun Tzu',
+        description: 'Ancient Chinese military treatise on strategy and tactics.',
+        downloadUrl: 'https://www.gutenberg.org/files/132/132-0.txt',
+        format: 'TXT',
+        source: 'Project Gutenberg',
+        coverUrl: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=200&h=300&fit=crop',
+        genre: 'Philosophy',
+        subject: 'Military Strategy'
+      },
+      {
+        id: '8',
+        title: 'The Metamorphosis',
+        author: 'Franz Kafka',
+        description: 'A man wakes up transformed into a giant insect.',
+        downloadUrl: 'https://www.gutenberg.org/files/5200/5200-0.txt',
+        format: 'TXT',
+        source: 'Project Gutenberg',
+        coverUrl: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=200&h=300&fit=crop',
+        genre: 'Surreal Fiction',
+        subject: 'Existential Literature'
+      },
+      {
+        id: '9',
+        title: 'A Tale of Two Cities',
+        author: 'Charles Dickens',
+        description: 'Set during the French Revolution, a story of love and sacrifice.',
+        downloadUrl: 'https://www.gutenberg.org/files/98/98-0.txt',
+        format: 'TXT',
+        source: 'Project Gutenberg',
+        coverUrl: 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=200&h=300&fit=crop',
+        genre: 'Historical Fiction',
+        subject: 'Victorian Literature'
+      },
+      {
+        id: '10',
+        title: 'The Picture of Dorian Gray',
+        author: 'Oscar Wilde',
+        description: 'A young man\'s portrait ages while he remains forever young.',
+        downloadUrl: 'https://www.gutenberg.org/files/174/174-0.txt',
+        format: 'TXT',
+        source: 'Project Gutenberg',
+        coverUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=300&fit=crop',
+        genre: 'Gothic Fiction',
+        subject: 'Aesthetic Movement'
+      },
+      {
+        id: '11',
+        title: 'The Time Machine',
+        author: 'H.G. Wells',
+        description: 'A Victorian scientist travels through time to witness humanity\'s future.',
+        downloadUrl: 'https://www.gutenberg.org/files/35/35-0.txt',
+        format: 'TXT',
+        source: 'Project Gutenberg',
+        coverUrl: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&h=300&fit=crop',
+        genre: 'Science Fiction',
+        subject: 'Time Travel'
+      },
+      {
+        id: '12',
+        title: 'Moby Dick',
+        author: 'Herman Melville',
+        description: 'Captain Ahab\'s obsessive quest to kill the white whale.',
+        downloadUrl: 'https://www.gutenberg.org/files/2701/2701-0.txt',
+        format: 'TXT',
+        source: 'Project Gutenberg',
+        coverUrl: 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=200&h=300&fit=crop',
+        genre: 'Adventure',
+        subject: 'Maritime Literature'
+      },
+      {
+        id: '13',
+        title: 'The Republic',
+        author: 'Plato',
+        description: 'Philosophical dialogue on justice and the ideal state.',
+        downloadUrl: 'https://www.gutenberg.org/files/1497/1497-0.txt',
+        format: 'TXT',
+        source: 'Project Gutenberg',
+        coverUrl: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=200&h=300&fit=crop',
+        genre: 'Philosophy',
+        subject: 'Political Philosophy'
+      },
+      {
+        id: '14',
+        title: 'Little Women',
+        author: 'Louisa May Alcott',
+        description: 'The story of the four March sisters growing up during the Civil War.',
+        downloadUrl: 'https://www.gutenberg.org/files/514/514-0.txt',
+        format: 'TXT',
+        source: 'Project Gutenberg',
+        coverUrl: 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=200&h=300&fit=crop',
+        genre: 'Coming of Age',
+        subject: 'Family Drama'
+      },
+      {
+        id: '15',
+        title: 'The Wonderful Wizard of Oz',
+        author: 'L. Frank Baum',
+        description: 'Dorothy\'s magical journey through the Land of Oz.',
+        downloadUrl: 'https://www.gutenberg.org/files/55/55-0.txt',
+        format: 'TXT',
+        source: 'Project Gutenberg',
+        coverUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=300&fit=crop',
+        genre: 'Fantasy',
+        subject: 'Children\'s Adventure'
+      },
+      {
+        id: '16',
+        title: 'The Communist Manifesto',
+        author: 'Karl Marx & Friedrich Engels',
+        description: 'Political pamphlet outlining communist theory.',
+        downloadUrl: 'https://www.gutenberg.org/files/61/61-0.txt',
+        format: 'TXT',
+        source: 'Project Gutenberg',
+        coverUrl: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=200&h=300&fit=crop',
+        genre: 'Political Theory',
+        subject: 'Economics'
+      },
+      {
+        id: '17',
+        title: 'Jane Eyre',
+        author: 'Charlotte Brontë',
+        description: 'An orphaned governess finds love and independence.',
+        downloadUrl: 'https://www.gutenberg.org/files/1260/1260-0.txt',
+        format: 'TXT',
+        source: 'Project Gutenberg',
+        coverUrl: 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=200&h=300&fit=crop',
+        genre: 'Romance',
+        subject: 'Victorian Literature'
+      },
+      {
+        id: '18',
+        title: 'The Strange Case of Dr. Jekyll and Mr. Hyde',
+        author: 'Robert Louis Stevenson',
+        description: 'A doctor\'s experiment unleashes his evil alter ego.',
+        downloadUrl: 'https://www.gutenberg.org/files/43/43-0.txt',
+        format: 'TXT',
+        source: 'Project Gutenberg',
+        coverUrl: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=200&h=300&fit=crop',
+        genre: 'Psychological Horror',
+        subject: 'Dual Nature'
+      },
+      {
+        id: '19',
+        title: 'Wuthering Heights',
+        author: 'Emily Brontë',
+        description: 'A passionate and destructive love story on the Yorkshire moors.',
+        downloadUrl: 'https://www.gutenberg.org/files/768/768-0.txt',
+        format: 'TXT',
+        source: 'Project Gutenberg',
+        coverUrl: 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=200&h=300&fit=crop',
+        genre: 'Gothic Romance',
+        subject: 'Passionate Love'
+      },
+      {
+        id: '20',
+        title: 'The Adventures of Tom Sawyer',
+        author: 'Mark Twain',
+        description: 'A mischievous boy\'s adventures along the Mississippi River.',
+        downloadUrl: 'https://www.gutenberg.org/files/74/74-0.txt',
+        format: 'TXT',
+        source: 'Project Gutenberg',
+        coverUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=300&fit=crop',
+        genre: 'Adventure',
+        subject: 'American Childhood'
+      }
     ].filter(book => 
       query.length === 0 || 
       book.title.toLowerCase().includes(query.toLowerCase()) ||
